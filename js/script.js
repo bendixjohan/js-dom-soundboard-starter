@@ -1,8 +1,9 @@
+"use strict";
 // Husk fra dag 1: skriv "use strict" herunder
 
 
 // Skriv selv: hent lion-knappen ved hjælp af dens id. Variablen skal hedde getLionBtn
-
+const getLionBtn = document.getElementById ("lion");
 
 // Nyt i dag: new Audio() opretter et lyd-objekt. src angiver, hvilken lydfil objektet skal afspille.
 const soundLion = new Audio();
@@ -20,6 +21,18 @@ getLionBtn.addEventListener("click", () => {
 // 2. Opret et Audio-objekt til dog-lyden ("sound/dog.wav"). Variablen skal hedde soundDog
 // 3. Tilføj en event listener til getDogBtn, der stopper alle lyde og afspiller soundDog
 
+const getDogBtn = document.getElementById ("dog");
+
+// Nyt i dag: new Audio() opretter et lyd-objekt. src angiver, hvilken lydfil objektet skal afspille.
+const soundDog = new Audio();
+soundDog.src = "sound/dog.wav";
+
+// Eksempel: vi lytter efter klik på lion-knappen og afspiller lyden med .play()
+getDogBtn.addEventListener("click", () => {
+    stopAllSounds();
+    soundDog.play();
+});
+
 
 /* =========================================================
    EKSTRAOPGAVE: elephant og monkey
@@ -32,6 +45,17 @@ getLionBtn.addEventListener("click", () => {
 // 2. Opret et Audio-objekt til elephant-lyden ("sound/elephant.wav"). Variablen skal hedde soundElephant
 // 3. Tilføj en event listener til getElephantBtn, der stopper alle lyde og afspiller soundElephant
 
+const getElephantBtn = document.getElementById ("elephant");
+
+// Nyt i dag: new Audio() opretter et lyd-objekt. src angiver, hvilken lydfil objektet skal afspille.
+const soundElephant = new Audio();
+soundElephant.src = "sound/elephant.wav";
+
+// Eksempel: vi lytter efter klik på lion-knappen og afspiller lyden med .play()
+getElephantBtn.addEventListener("click", () => {
+    stopAllSounds();
+    soundElephant.play();
+});
 
 // E4. Monkey
 // Skriv selv: gør det samme for monkey.
@@ -39,14 +63,25 @@ getLionBtn.addEventListener("click", () => {
 // 2. Opret et Audio-objekt til monkey-lyden ("sound/monkey.wav"). Variablen skal hedde soundMonkey
 // 3. Tilføj en event listener til getMonkeyBtn, der stopper alle lyde og afspiller soundMonkey
 
+const getMonkeyBtn = document.getElementById ("monkey");
+
+// Nyt i dag: new Audio() opretter et lyd-objekt. src angiver, hvilken lydfil objektet skal afspille.
+const soundMonkey = new Audio();
+soundMonkey.src = "sound/monkey.wav";
+
+// Eksempel: vi lytter efter klik på lion-knappen og afspiller lyden med .play()
+getMonkeyBtn.addEventListener("click", () => {
+    stopAllSounds();
+    soundMonkey.play();
+});
 
 
 // Eksempel: denne funktion stopper og nulstiller lion-lyden, så den er klar til at blive afspillet igen.
 // Nyt i dag: .pause() stopper afspilningen. .currentTime = 0 spoler lyden tilbage til starten,
 // så den starter fra begyndelsen, næste gang den afspilles.
 function stopAllSounds() {
-    soundLion.pause();
-    soundLion.currentTime = 0;
+    soundMonkey.pause();
+    soundMonkey.currentTime = 0;
 
     // Skriv selv: gør det samme for soundDog, når du har oprettet den ovenfor
 
